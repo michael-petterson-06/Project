@@ -1,0 +1,24 @@
+<!DOCTYPE htmL>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Usando o operador &&</title>
+</head>
+<body>
+    <main class="container">
+        <script>
+            function compareTrue(valorMaior,valorSexo){
+                let inforMaior = valorMaior;
+                let inforSexo = valorSexo;
+                let resposta = inforMaior >= 18 && inforSexo =="masc";
+                    document.write(resposta);
+            }
+            let maioridade = 18;
+            let sexo = "masc";
+            compareTrue(maioridade, sexo)
+        </script>
+    </main>
+</body>
+</html>
