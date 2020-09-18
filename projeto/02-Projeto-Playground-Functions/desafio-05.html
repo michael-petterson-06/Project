@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="style.css">
+    <title>5 - Pontos no futebol</title>  
+</head>
+<body>
+    <main class="container">
+       <script>
+            function footBallPoints(vitoria,empate){
+              let valorVitoria = vitoria;
+              let valorEmpate = empate;
+              let somaVitorias = valorVitoria * 3;
+              let somaEmpates = valorEmpate * 1;
+              let totalPontos = somaVitorias + somaEmpates;
+              document.write("Total de pontos do time no campeonato é: " + totalPontos); 
+            }
+           let wins = 10;
+           let ties = 5;
+           footBallPoints(wins,ties);
+           
+
+       </script>
+    </main>
+</body>
+</html>
