@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio-7</title>
+ </head>
+ <body>
+    <main class="container">
+       <script>
+           function catAndMouse(gato1,gato2,rato){
+                let valorGato1 = gato1;
+                let valorGato2 = gato2;
+                let valorRato = rato;
+                let gato1Rato = valorRato-valorGato1;
+                let gato2Rato = valorRato-valorGato2;
+                if(gato1Rato < gato2Rato){
+                    document.write("GATO 1 pegou o rato");
+                } else if(gato1Rato > gato2Rato){
+                    document.write("GATO 2 pegou o rato");
+                }else{
+                    document.write("Os gatos se trombaram e o rato fugiu")
+                }    
+
+           }
+
+        let cat1 = 10;
+        let cat2 = 10;
+        let mouse = 100;
+        catAndMouse(cat1,cat2,mouse);
+       </script>
+     </main>    
+ </body>
+ </html>
