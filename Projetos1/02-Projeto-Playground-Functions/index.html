@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styele.css">
+    <link rel="stylesheet" href="style.css">
     <title>Projeto-Requisíto-1</title>
 </head>
 <body>
-    <script>
-        let numero1 = 1;
-        let numero2 = 10;
-        let letra1 = "a";
-        let letra2 = "a"; 
-        let verificar1 = numero1 == numero2;
-        let verificar2 = letra1 == letra2;
-        compara = verificar1 && verificar2;
-        document.write(compara);
-    </script>
+    <main class="container">
+        <script>
+            function compara(valorMaior,valorSexo){
+                let inforMaior = valorMaior;
+                let inforSexo = valorSexo;
+                let resposta = inforMaior >= 18 && inforSexo =="masc";
+                    document.write(resposta);
+            }
+            let maioridade = 18;
+            let sexo = "masc";
+            compara(maioridade, sexo)
+        </script>
+    </main>
 </body>
 </html>
