@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>4 - Concatenação de strings</title>
+</head>
+<body>
+    <main class="container">
+        <script>
+           function concatName(vetor){
+               let valores = vetor;
+               let primeiroUltimo = valores[0] + ", " + valores[valores.length-1];
+               document.write(primeiroUltimo);
+           }
+           let array = ["Michael","Fernanda","Matheus","Davi","Miguel","Aysha"]
+           concatName(array);
+        </script>
+    </main>
+</body>
+</html>
