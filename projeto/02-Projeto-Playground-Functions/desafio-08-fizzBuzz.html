@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Desafio-08</title>
+</head>
+<body>
+    <main class="container">
+        ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]<br>
+      <script>
+        function fizzBuzz(vetor){
+            let valores = vetor;
+            for(let i = 0; i < valores.length; i +=1){
+                if (valores[i] % 5 == 0 && valores[i] % 3 == 0){
+                    document.write("FizzBuzz, ");
+                }
+                else if (valores[i] % 5 == 0){
+                    document.write("Buzz, ");
+                }
+                else if(valores[i] % 3 == 0){  
+                    document.write("Fizz, ");
+                }
+                else {
+                    document.write("Bug!!, ");
+                }
+            }
+        }
+        let array = [2, 15, 7, 9, 45];
+        document.write(array+"<br><br>");
+        fizzBuzz(array);
+      </script>
+     </main>    
+</body>
+</html>
+
