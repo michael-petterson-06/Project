@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio-10</title>
+</head>
+<body>
+    <main class="container">
+       <script>
+           function cursos(cursosPreferidos,usuario){
+               preferencia = cursosPreferidos;
+               let nomeAluno = usuario;
+               document.write(preferencia + "<br><br>");
+               let tech = {name:"",aluno:nomeAluno};
+               for(let i = 0; i < preferencia.length; i +=1){
+                    tech.name = "Tech: " + preferencia[i] + "<br>";
+                    tech.aluno = "Nome: " + nomeAluno + "<br><br>";
+                    document.write(tech.name,tech.aluno);
+               }
+            }
+           let cursosUsuario = ["React", "Jest", "HTML", "CSS", "JavaScript","SQL"];
+           let nome = "Michael";
+           cursos(cursosUsuario,nome);
+       </script>
+     </main>    
+</body>
+</html>
