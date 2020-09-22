@@ -14,11 +14,16 @@
                let nomeAluno = usuario;
                document.write(preferencia + "<br><br>");
                let tech = {name:"",aluno:nomeAluno};
-               for(let i = 0; i < preferencia.length; i +=1){
-                    tech.name = "Tech: " + preferencia[i] + "<br>";
-                    tech.aluno = "Nome: " + nomeAluno + "<br><br>";
-                    document.write(tech.name,tech.aluno);
+               if(preferencia == ""){
+                   document.write("VAZIO");
                }
+               else {
+                    for(let i = 0; i < preferencia.length; i +=1){
+                        tech.name = "Tech: " + preferencia[i] + "<br>";
+                        tech.aluno = "Nome: " + nomeAluno + "<br><br>";
+                        document.write(tech.name,tech.aluno);
+                    }
+                }
             }
            let cursosUsuario = ["React", "Jest", "HTML", "CSS", "JavaScript","SQL"];
            let nome = "Michael";

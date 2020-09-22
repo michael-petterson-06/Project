@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio-11-Bônus</title>
+</head>
+<body>
+    <main class="container">
+        <script>
+            function generatePhoneNumber(valor){
+                telefoneUsuario = valor;
+                let prefixo = "(" + telefoneUsuario[0] + telefoneUsuario[1] +")";
+                let primeiroNumero = "";
+                let segundoNumero = "";
+                let respostaTelefone = "";
+                let contador = 0;
+                let quantidadeNumero = 0;
+                let resposta = "";
+               
+                for(let i = 0; i < telefoneUsuario.length; i+=1){
+                    for(let j = 0; j < telefoneUsuario.length; j+=1){
+                        if(telefoneUsuario[i] == telefoneUsuario[j]){
+                           contador +=1;
+                        }
+                        if(quantidadeNumero < contador){
+                            quantidadeNumero = contador;
+                        }
+                    }
+                    contador = 0;
+                }
+                for(let  i = 0; i < telefoneUsuario.length; i+=1){
+                    if(telefoneUsuario[i] < 0 || telefoneUsuario[i] > 9){
+                        resposta = "Não é possível gerar um número de telefone com esses valores.";
+                         break;
+                    }
+                }
+                if(telefoneUsuario.length != 11){
+                    document.write("Número com tamanho incorreto. <br>");
+                }
+                else if(quantidadeNumero > 2){
+                    document.write("Impossível!!! Algum número repetiu mais de 2x.");
+                }    
+                else if (resposta != ""){
+                    document.write(resposta);
+                }
+                else {
+                    for(let i = 2; i < telefoneUsuario.length-4; i+=1){
+                        primeiroNumero += telefoneUsuario[i];
+                    }
+                    for(let i = 7; i < telefoneUsuario.length; i+=1){
+                        segundoNumero += telefoneUsuario[i];
+                    }
+                    document.write(respostaTelefone=prefixo+primeiroNumero+"-"+segundoNumero);
+                }         
+            }
+            let telefone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+            document.write(telefone+"<br><br>");
+            generatePhoneNumber(telefone);
+        </script>    
+    </main>    
+</body>    
+</html>
