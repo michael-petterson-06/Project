@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <title>Desafio-12-Triângulo</title>
+ </head>    
+<body>
+    <main class="container">
+        <script>
+           function triangleCheck(ladoA,ladoB,ladoC){
+                let numeroA = ladoA;
+                let numeroB = ladoB;
+                let numeroC = ladoC;
+                let base = 0;
+                let somaDoisLados = 0;
+                if(numeroA > numeroB && numeroA > numeroC){
+                    base = numeroA;
+                    somaDoisLados = numeroB + numeroC;
+                }
+                else if(numeroB > numeroA && numeroB > numeroC){
+                    base = numeroB;
+                    somaDoisLados = numeroA + numeroC;
+                }
+                else {
+                    base = numeroC;
+                    somaDoisLados = numeroA + numeroB;
+                }
+                resposta = base <  somaDoisLados;
+                document.write(resposta);    
+            }    
+            let valorA = 10;
+            let valorB = 14;
+            let valorC = 24;
+            triangleCheck(valorA,valorB,valorC);
+         </script>
+    </main>    
+</body>
+ </html>
