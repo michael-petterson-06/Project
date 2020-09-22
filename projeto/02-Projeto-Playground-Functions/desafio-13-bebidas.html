@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio-13-Bebidas</title>
+</head>    
+<body>
+    <main class="container">
+        <script>
+            function hydrate(alcool){
+              let textoDividido = alcool.split(" ")
+              let numeros = 0;
+              let coposAgua = 0;
+              for (let i = 0; i < textoDividido.length-1; i+=1){
+                 valor1 = Number(textoDividido[i]);
+                 if (!isNaN(valor1)){
+                     numeros = valor1;
+                     coposAgua += numeros    
+                 }
+              }
+             document.write("Copos de água: " + coposAgua);
+            }
+             let bebidas = "15 cachaça, 15 cervejas e 15 copo de vinho ";
+             document.write(bebidas+"<br><br>");
+             hydrate(bebidas);
+         </script>
+    </main>    
+</body>
+</html>
