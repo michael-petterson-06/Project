@@ -27,13 +27,11 @@ main {
 }
 
 #resposta {
-display: block;
+  display: block;
   font-size: 25px;
   color: blue;
   margin-top: -175px;
   word-wrap: break-word;
-  
-  
 }
 
 button {
