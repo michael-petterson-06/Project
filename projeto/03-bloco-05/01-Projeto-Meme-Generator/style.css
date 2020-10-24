@@ -1,0 +1,48 @@
+main {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#text-input {
+  margin-right: 208px;
+}
+
+#meme-insert {
+  margin-right: 117px;
+}
+
+#meme-image-container {
+    margin:auto;
+    background-color: white;
+    border: solid 1px black;
+    width: 410px;
+    height: 350px;
+}
+
+.imagem {
+  width: 410px;
+  height: 350px;
+  
+}
+
+#resposta {
+display: block;
+  font-size: 25px;
+  color: blue;
+  margin-top: -175px;
+  word-wrap: break-word;
+  
+  
+}
+
+button {
+    display: inline-block;
+    font-size: 19.5px;
+}
+
+.imagemDisponivel {
+    width: 100px;
+    height: 100px;
+    display:inline-block;
+}
