@@ -1,0 +1,23 @@
+.container {
+  width: 800px;
+  margin: auto;
+  background-color:	#7FFFD4;
+  border-radius: 10px;
+}
+
+#funcionamento {
+ color: #B0C4DE;
+ font-weight: bolder;
+}
+
+#lista-tarefas, button {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgb(128,128,128);
+}
+
+.completed {
+  text-decoration: line-through;
+}
