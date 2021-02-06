@@ -8,9 +8,7 @@ body {
   background-color: #ebeff7;
 }
 .container {
-  padding: 20px 50px ;
   width: 100%;
-  
 }
 
 .top-bar {
@@ -62,22 +60,15 @@ body {
   cursor: pointer;
 }
 
-.container-lados {
-  
- 
-}
-
 .lado-foto {
   width: 60%;
   float: left;
   padding: 30px 100px;
-  background-color: #ebeff7;
+ 
 }
 
 .lado-cadastro {
   float: left;
-  background-color: #ebeff7;
-  height: 342px;
   width: 40%;
 }
 
