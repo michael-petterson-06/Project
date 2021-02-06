@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Facebook</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="top-bar">
+        <img class="facebook-logo" src="image/facebook.png" alt="Facebook">
+        <div class="input-container">
+           <div class="input-email-telefone-container">
+              <label for="user-email-phone" id="user-email-phone-label">Email ou telefone</label><br>
+              <input type="text" id="user-email-phone">
+           </div> 
+           <div class="input-senha-container">
+             <label for="senha" id="senha-label">Senha</label><br>
+             <input type="password" id="senha">
+             <a href="https://pt-br.facebook.com/"><p>Esqueceu sua senha</p></a>
+           </div>
+           <div class="botao-entrar-container">
+             <button id="button-login">Entrar</button>
+           </div>
+        </div>
+      </header>
+     
+      <section class="container-lados">
+        <aside class="lado-foto">
+          <p>O Facebook ajuda você a se conectar e <br> compartilhar com as pessoas que fazem parte <br> da sua vida </p>
+          <img  id = "facebook-networking" src="image/networking.png" alt="Conectando o Mundo">
+        </aside>
+        <aside class="lado-cadastro">
+          <h1>Abra uma conta</h1>
+          <p>É rápido e facil</p>
+          <div class="nomeSobrenome-container">
+            <input type="text" placeholder="Nome" class="nome formataCadastro" >
+            <input type="text" placeholder="Sobrenome" class="sobreNome formataCadastro">
+          </div>
+          <input type="text" placeholder="Celular ou Email" class="email formataCadastro"> <br>
+          <input type="password" placeholder="Nova senha" class="novaSenha formataCadastro"><br>
+          <label for="" class="data-label">Data de nascimento</label><br>
+          <input type="date" class="data formataCadastro"><br><br>
+          <div class=container-genero>
+            <label for="" class="genero-label">Gênero</label><br><br>
+            <input type="radio" name="genero" id="feminino" class="genero" value="Feminino">
+            <label for="feminino">Feminino</label>
+            <input type="radio" name="genero" id="masculino" class="genero" value="Masculino" checked>
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" id="personalizado" value="personalizado" class="genero">
+            <label for="personalizado">Personalizado</label><br><br>
+            <p>Ao clicar em Cadastro-se, você concorda com nossos<br><span>Termos, Política de Dados e Política de Cookies.</span>Você pode<br>receber notificações por SMS e pode cancelar isso quando quiser.</p>
+          </div>
+          <button id="facebook-register">Cadastre-se</button>
+        </aside>
+      </section>
+     </main>
+   </body>
+

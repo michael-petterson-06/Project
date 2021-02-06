@@ -1,0 +1,158 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+  background-color: #ebeff7;
+}
+.container {
+  padding: 20px 50px ;
+  width: 100%;
+  
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3b5998;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.input-container {
+  display:flex;
+  justify-content: space-evenly;
+  width: 40%;
+  padding-top: 10px;
+}
+
+.facebook-logo {
+  width: 250px;
+  height: 75px;
+  padding: 17px 0px 0px 50px ;
+}
+
+.input-container label, .input-senha-container p{
+  color: white;
+  font-weight:bold;
+}
+
+#user-email-phone, #senha {
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+#user-email-phone, #senha {
+  padding: 5px;
+}
+
+.input-senha-container p {
+ opacity: 0.5;
+ cursor: pointer;
+}
+
+#button-login {
+  margin: 27px 0px;
+  font-weight:bold;
+  color: white;
+  background-color: #3b5998;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.container-lados {
+  
+ 
+}
+
+.lado-foto {
+  width: 60%;
+  float: left;
+  padding: 30px 100px;
+  background-color: #ebeff7;
+}
+
+.lado-cadastro {
+  float: left;
+  background-color: #ebeff7;
+  height: 342px;
+  width: 40%;
+}
+
+.lado-foto p {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #3b5998;
+}
+
+h1 {
+  font-size: 40px;
+  padding: 20px;
+}
+
+.lado-cadastro p {
+  font-size: 20px;
+  padding: 0px 20px 20px 20px;
+}
+
+.formataCadastro {
+  padding: 5px;
+  margin: 7px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid gray ;
+}
+
+.nome, .sobreNome {
+  width: 200px;
+}
+
+.email, .novaSenha {
+  width: 413px;
+}
+
+.novaSenha {
+  margin: 10px 0px 20px 5px;
+}
+
+.data-label, .genero-label {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.lado-cadastro {
+  font-weight: bolder;
+  color: gray;
+}
+
+.container-genero {
+  font-size: 20px;    
+}
+
+#personalizado, #masculino {
+  margin-left:10px ;
+}
+
+span {
+  color:#4682B4;
+}
+
+.container-genero p {
+  font-size: 15px;
+  margin-left: -20px;
+}
+
+#facebook-register {
+  font-size: 30px;
+  background-color: rgb(96, 157, 77);
+  border: 1px solid rgb(96, 157, 77);
+  padding: 10px 20px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+
+}
+
+
