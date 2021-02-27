@@ -134,10 +134,7 @@ function animalMap(options = {}) {
   
   objeto = {}
   animals.forEach((valor) => {
-
-
-    
-    objeto[valor.location] = [valor.name]
+   objeto[valor.location] = [valor.name]
   })
   return objeto
 }
