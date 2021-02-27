@@ -138,7 +138,6 @@ function animalMap(options = {}) {
   })
   return objeto
 }
-
 options = { sex: 'female' }
 
 //console.log(animalMap());   INCOMPLETO
