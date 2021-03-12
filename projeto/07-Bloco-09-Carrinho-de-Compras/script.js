@@ -35,19 +35,17 @@ const salvandoPagina = () => {
   localStorage.setItem('chaveLista', lista)
 }
 
-const array = [];
 async function adicionarCarrinho(sku) {
   const itemId = sku;
   const ol = document.querySelector('.cart__items');
   const product = await fetch(`https://api.mercadolibre.com/items/${itemId}`);
-  const product2 = await fetch(`https://api.mercadolibre.com/items/${itemId}`);
   const json = await product.json()
   .then((element) => createCartItemElement({
         sku: element.id, name: element.title, salePrice: element.price,
       })
      )
   ol.appendChild(json);
-  somarPrecos()
+  somarPrecos();
   salvandoPagina();
 }
 
@@ -88,9 +86,8 @@ const pegarInfFetch = async (produto) => {
      section.appendChild(createProductItemElement(dadosDosProdutos));
     });
   });
-  document.querySelector('.loading').remove();
-  
-
+  const loading = document.querySelector('.loading');
+  loading.remove()
   return section;
 }
 
@@ -122,7 +119,6 @@ const clearAll = () => {
   somarPrecos();
   salvandoPagina();
 }
-
 
 const limparTudo = document.getElementsByClassName('empty-cart')[0];
 limparTudo.addEventListener('click', clearAll);
