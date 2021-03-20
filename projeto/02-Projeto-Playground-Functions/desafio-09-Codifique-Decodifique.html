@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Desafio-09</title>
 </head>
+
 <body>
     <main class="container">
         <script>
             let respostaEncode = "";
-            function encode(frase){
-               let letra = frase.split("");
-                
-               for(let i = 0; i < letra.length; i+=1){
-                    if(letra[i] == "a"){
+
+            function encode(frase) {
+                let letra = frase.split("");
+
+                for (let i = 0; i < letra.length; i += 1) {
+                    if (letra[i] == "a") {
                         letra[i] = 1;
                     }
-                    if(letra[i] == "e"){
+                    if (letra[i] == "e") {
                         letra[i] = 2;
                     }
-                    if(letra[i] == "i"){
+                    if (letra[i] == "i") {
                         letra[i] = 3;
                     }
-                    if(letra[i] == "o"){
+                    if (letra[i] == "o") {
                         letra[i] = 4;
                     }
-                    if(letra[i] == "u"){
+                    if (letra[i] == "u") {
                         letra[i] = 5;
                     }
-               }
-               for(let i = 0; i < letra.length; i+=1){
+                }
+                for (let i = 0; i < letra.length; i += 1) {
                     respostaEncode += letra[i];
-               }
-               document.write("Resposta codificada: " + respostaEncode + "<br>");
+                }
+                document.write("Resposta codificada: " + respostaEncode + "<br>");
             }
-            function decode(fraseCodificada){
+
+            function decode(fraseCodificada) {
                 let letra = respostaEncode.split("");
-                let respostaDecodificada ="";
-                for(let i = 0; i < letra.length; i+=1){
-                    if(letra[i] == 1){
+                let respostaDecodificada = "";
+                for (let i = 0; i < letra.length; i += 1) {
+                    if (letra[i] == 1) {
                         letra[i] = "a";
                     }
-                    if(letra[i] == 2){
+                    if (letra[i] == 2) {
                         letra[i] = "e";
                     }
-                    if(letra[i] == 3){
+                    if (letra[i] == 3) {
                         letra[i] = "i";
                     }
-                    if(letra[i] == 4){
+                    if (letra[i] == 4) {
                         letra[i] = "o";
                     }
-                    if(letra[i] == 5){
+                    if (letra[i] == 5) {
                         letra[i] = "u";
                     }
-                }   
-                for(let i = 0; i < letra.length; i +=1){
-                        respostaDecodificada += letra[i];
-                    }
+                }
+                for (let i = 0; i < letra.length; i += 1) {
+                    respostaDecodificada += letra[i];
+                }
                 document.write("Resposta descodificada: " + respostaDecodificada);
             }
-            let fraseUsuario ="Eu amo minha família";
-            document.write(fraseUsuario+"<br><br>")
+            let fraseUsuario = "Eu amo minha família";
+            document.write(fraseUsuario + "<br><br>")
             encode(fraseUsuario);
             decode(respostaEncode);
         </script>
-     </main>    
-</body>   
+    </main>
+</body>
+
 </html>
