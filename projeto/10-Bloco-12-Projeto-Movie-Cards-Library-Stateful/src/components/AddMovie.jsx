@@ -21,39 +21,38 @@ class AddMovie extends React.Component {
     this.state = INITIAL_STATE;
   };
 
-  changeState(event, chave) {
-    const { value } = event.target;
-    this.setState({ [chave]: (chave === 'rating' ? parseFloat(value) : value) });
-  }
 
   adicionarFilme = () => {
     this.props.onClick(this.state);
     this.setState(INITIAL_STATE);
   }
-
+  handleChange = (event) => {
+    const { value } = event.target;
+    this.setState({
+      [event.target.name]: (event.target.type === 'number' ? parseFloat(value) : value) })
+   }
 
   render() {
-    //   const { onClick } = this.props;
-      const { subtitle, title, imagePath, storyline, rating, genre} = this.state;
+    const { subtitle, title, imagePath, storyline, rating, genre} = this.state;
     return (
       <form>
         <label>Título
-        <input type="text" value={title} name='title' onChange={(event) => this.changeState(event, 'title')}/>
+        <input type="text" value={title} name='title' onChange={this.handleChange}/>
         </label>
         <label>Subtítulo</label>
-        <input type="text" value={subtitle} name='subtitle' onChange={(event) => this.changeState(event, 'subtitle')}/>
+        <input type="text" value={subtitle} name='subtitle' onChange={this.handleChange}/>
 
         <label>Imagem</label>
-        <input type="text" value={imagePath} name='imagePath' onChange={(event) => this.changeState(event, 'imagePath')}/>
+        <input type="text" value={imagePath} name='imagePath' onChange={this.handleChange}/>
         
         <label>Sinopse</label>
-        <textarea  value={storyline} name='storyline' onChange={(event) => this.changeState(event, 'storyline')}></textarea>
+        <textarea  value={storyline} name='storyline' onChange={this.handleChange}></textarea>
 
         <label>Avaliação</label>
-        <input type="number" value={rating} name='rating' onChange={(event) => this.changeState(event, 'rating')} />
+        <input type="number" value={rating} name='rating' onChange={this.handleChange}/>
 
         <label htmlFor="">Gênero</label>
-        <select name='genre' id='genre' value={genre} onChange={(event) => this.changeState(event, 'genre')}>
+        <select name='genre' id='genre' value={genre} onChange={this.handleChange}>
            {todosGeneros.map(({genero, valor}) => (
            <option key={genero} value={valor}>{genero}</option>
           ))}
