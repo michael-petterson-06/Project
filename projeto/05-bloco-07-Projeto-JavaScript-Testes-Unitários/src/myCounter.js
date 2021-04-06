@@ -1,8 +1,3 @@
-/* eslint-disable no-var */
-/* eslint-disable block-scoped-var */
-/* eslint-disable no-redeclare */
-/* eslint-disable vars-on-top */
-
 /*
   A função myCounter possui dois loops aninhados que inserem valores dentro de um array.
   Como podemos perceber, eles vão adicionando valores ao array até sua condição de parada.
@@ -16,17 +11,14 @@
 */
 
 const myCounter = () => {
-  var myArray = [];
-  for (var counter1 = 0; counter1 <= 3; counter1 += 1) {
-    myArray.push(counter1);
-    for (var counter2 = 2; counter2 <= 3; counter2 += 1) {
-      myArray.push(counter2);
+  let array = [];
+  for (let i = 0; i <= 3; i += 1) {
+    array.push(i);
+    for (let j = 2; j <= 3; j += 1) {
+      array.push(j);
     }
   }
-  return myArray;
+  return array;
 };
-
-const chamaMyCounter = myCounter();
-console.log(chamaMyCounter);
 
 module.exports = myCounter;

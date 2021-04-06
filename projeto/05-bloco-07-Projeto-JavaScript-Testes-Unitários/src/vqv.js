@@ -17,18 +17,12 @@
 */
 
 const vqv = (nome, idade) => {
-  let parametroNome =  typeof(nome);
-  let parametroIdade = typeof(idade);
- 
-  if (parametroNome == 'undefined' && parametroIdade =='undefined') {
-    return parametroIdade;
-  }  
-  return `Oi, meu nome é ${nome}!
-  tenho ${idade} anos,
-  trabalho no Google e mando muito em programação!
-  #VQV!`
+  const trybe = 'Trybe e mando muito em programação!';
+  if (nome === undefined && idade === undefined) {
+    return undefined;
+  }
+  return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na ${trybe}\n#VQV!`;
 };
-
-console.log(vqv('Michael', 38));
+console.log(vqv('Tunico', 29));
 
 module.exports = vqv;
