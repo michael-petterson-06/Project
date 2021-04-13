@@ -1,27 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+
 import MovieList from './pages/MovieList';
-import MovieDetails from './pages/MovieDetails';
-import NewMovie from './pages/NewMovie';
+import MovieDetail from './pages/MovieDetails';
 import EditMovie from './pages/EditMovie';
+import NewMovie from './pages/NewMovie';
 import NotFound from './pages/NotFound';
+
 import './App.css';
 
 function App() {
   return (
-    
-    <Router>
-      <header>
-        <h1>Movie Card Library CRUD</h1>
-      </header>
+    <BrowserRouter>
+      <div>Movie Card Library Crud</div>
+      <Link to="/movies/new">ADICIONAR CARTÃO</Link>
       <Switch>
         <Route exact path="/" component={MovieList} />
-        <Route path="/movies/new" component={NewMovie} />
-        <Route path="/movies/:id/edit" component={EditMovie} />
-        <Route path="/movies/:id" component={MovieDetails} />
+        <Route exact path="/movies/new" component={NewMovie} />
+        <Route path="/movies/:id/edit" render={(props) => <EditMovie {...props} />} />
+        <Route exact path="/movies/:id" render={(props) => <MovieDetail {...props} />} />
         <Route component={NotFound} />
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 }
 
