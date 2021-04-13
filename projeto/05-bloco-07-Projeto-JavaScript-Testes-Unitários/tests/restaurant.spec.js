@@ -49,8 +49,8 @@ const createMenu = require('../src/restaurant');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-describe('#createMenu', () => {
-  it('tests the function has the correct behaviour', () => {
+// describe('#createMenu', () => {
+//   it('tests the function has the correct behaviour', () => {
     // TESTE 1: Verifique que, dado um objeto qualquer passado como um parâmetro para a função createMenu(), checa se o retorno da função é um objeto no seguinte formato: { fetchMenu: objetoQualquer }.
     // ```
     // createMenu(objetoQualquer) // Retorno: { fetchMenu: objetoQualquer }
@@ -160,5 +160,5 @@ describe('#createMenu', () => {
 
     assert.deepStrictEqual(input8, output8);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
-  });
-});
+//   });
+// });

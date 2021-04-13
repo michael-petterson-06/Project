@@ -100,4 +100,7 @@ const createMenu = objeto => Object.assign(restaurant, {
   pay: () => toPay(Object.entries(restaurant.fetchMenu.food)) + toPay(Object.entries(restaurant.fetchMenu.drink)),
 });
 
+
+
+
 module.exports = createMenu;
