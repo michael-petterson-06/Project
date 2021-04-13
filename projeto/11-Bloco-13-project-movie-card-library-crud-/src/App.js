@@ -13,7 +13,6 @@ function App() {
   return (
     <BrowserRouter>
       <div>Movie Card Library Crud</div>
-      <Link to="/movies/new">ADICIONAR CARTÃO</Link>
       <Switch>
         <Route exact path="/" component={MovieList} />
         <Route exact path="/movies/new" component={NewMovie} />
@@ -21,6 +20,7 @@ function App() {
         <Route exact path="/movies/:id" render={(props) => <MovieDetail {...props} />} />
         <Route component={NotFound} />
       </Switch>
+      <Link to="/movies/new">ADICIONAR CARTÃO</Link>
     </BrowserRouter>
   );
 }
